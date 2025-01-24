@@ -1,0 +1,124 @@
+/* General List Styling */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  /* Individual Todo Item Styling */
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text Styling */
+  .itemText {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .itemText.completed {
+    text-decoration: line-through;
+    color: #aaa;
+    font-weight: 400;
+  }
+  
+  /* Checkbox Styling */
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #4caf50;
+  }
+  
+  /* Input Field for Editing */
+  .editInput {
+    flex: 1;
+    margin-left: 16px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .editInput:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Buttons Shared Styling */
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Edit Button */
+  .editButton {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Save Button */
+  .saveButton {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* Delete Button */
+  .deleteButton {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .deleteButton:hover {
+    background-color: #b02a37;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .editInput {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
